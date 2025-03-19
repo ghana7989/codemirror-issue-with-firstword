@@ -1,16 +1,15 @@
-# React + Vite
+SPARQL Editor Autocomplete Issue
+This repository demonstrates a specific issue with CodeMirror's autocomplete functionality in a SPARQL editor implementation. The goal is to gather community insights and solutions to fix this problem.
+🐛 The Issue
+When using the SPARQL editor with CodeMirror autocomplete:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Start with an empty editor
+Type the first few characters of a word (e.g., type "sel")
+Select a suggestion from the dropdown (e.g., "SELECT")
+Expected behavior: The typed text should be replaced with the selection (e.g., "SELECT")
+Actual behavior: The selection gets appended to the typed text (e.g., "selSELECT")
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
+Important: This issue only occurs with the first word in an empty editor. In other contexts within the editor, the autocomplete works as expected.
 
 https://github.com/user-attachments/assets/8f136f0c-e8c8-4ba5-b05c-2804235554d0
 
